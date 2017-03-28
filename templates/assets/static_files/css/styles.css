@@ -1,0 +1,1268 @@
+/* font-family: "PTSansRegular"; */
+@font-face {
+    font-family: "PTSansRegular";
+    src: url("../fonts/PTSansRegular/PTSansRegular.eot");
+    src: url("../fonts/PTSansRegular/PTSansRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/PTSansRegular/PTSansRegular.woff") format("woff"),
+    url("../fonts/PTSansRegular/PTSansRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "PTSansItalic"; */
+@font-face {
+    font-family: "PTSansItalic";
+    src: url("../fonts/PTSansItalic/PTSansItalic.eot");
+    src: url("../fonts/PTSansItalic/PTSansItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/PTSansItalic/PTSansItalic.woff") format("woff"),
+    url("../fonts/PTSansItalic/PTSansItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "PTSansBold"; */
+@font-face {
+    font-family: "PTSansBold";
+    src: url("../fonts/PTSansBold/PTSansBold.eot");
+    src: url("../fonts/PTSansBold/PTSansBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/PTSansBold/PTSansBold.woff") format("woff"),
+    url("../fonts/PTSansBold/PTSansBold.ttf") format("truetype");
+    /*font-style: normal;*/
+    font-weight: bold;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+}
+
+.grid {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.group::before,
+.group::after {
+    content: "";
+    display: table;
+}
+
+.group::after {
+    clear: both;
+}
+
+.group {
+    clear: both;
+    *zoom: 1;
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+----------------------------------------------------MAIN-PAGE----------------------------------------------------------
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+/*------------------HEADER------------------*/
+
+.header {
+    background-color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.logo{
+    float: left;
+}
+
+.logo a{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+h3 {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: "PTSansRegular", sans-serif;
+    font-size: 18px;
+    color: rgba(26, 26, 26, 0.8);
+    font-weight: normal;
+    padding-left: 25px;
+}
+
+.languages{
+    float: right;
+    font-family: "PTSansRegular", sans-serif;
+    font-size: 14px;
+    color: rgba(26, 26, 26, 0.5);
+    list-style: none;
+    padding-top: 22px;
+}
+
+.languages li{
+    display: inline-block;
+
+}
+
+.languages li:first-child{
+    vertical-align: top;
+    padding-right: 4px;
+}
+
+nav{
+    font-family: "PTSansRegular", sans-serif;
+    background-color: #224484;
+}
+
+.menu{
+    float: left;
+    font-size: 14px;
+    list-style: none;
+}
+
+.menu > li {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.menu > li > a{
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 22px 35px;
+}
+
+.menu > li > a:hover {
+    background-color: #335fab;
+}
+
+.submenu{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    width: 180px;
+    /*display: none;*/
+    list-style: none;
+    z-index: 1001;
+    -webkit-box-shadow: 0 2px 22px -4px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 2px 22px -4px rgba(0,0,0,0.5);
+    box-shadow: 0 2px 22px -4px rgba(0,0,0,0.5);
+}
+
+.submenu li{
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.submenu li:last-child{
+    border-bottom: none;
+}
+
+.submenu a{
+    display: inline-block;
+    color: #3d3d3d;
+    text-decoration: none;
+    padding: 10px 0 10px 20px;
+}
+
+.submenu a:hover{
+    color: #335fab;
+    text-decoration: underline;
+}
+
+.menu > li:hover .submenu{
+    display: block;
+}
+
+.nav_bar form{
+    float: right;
+    width: 26.4957264957265%;
+    padding-top: 15px;
+}
+
+.nav_bar form label{
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
+.nav_bar form input{
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    height: 30px;
+    padding-left: 10px;
+    background: #335fab url("../../assets/images/search_icon.png") 95% center no-repeat;
+    border: none;
+    outline: 0;
+}
+
+
+/*------------------SLIDER------------------*/
+
+main{
+    background-color: #fff;
+}
+
+.slider {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.slick-list {
+    height: 100%;
+}
+
+.slick-track {
+    height: 100%;
+}
+
+.sl_slide {
+    width: 100%;
+    height: 100%;
+}
+
+.sl_slide img {
+    width: 100%;
+    height: auto;
+    /*object-fit: cover;*/
+    /*object-position: center top;*/
+}
+
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+.slick-dots {
+    bottom: 25px;
+    list-style: none;
+
+    text-align: left;
+    padding-left: 25px;
+}
+
+.slick-dots li {
+    margin: 0 2px;
+}
+
+.slick-dots li button:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: #fff;
+    content: '';
+    opacity: 1;
+    box-sizing: border-box;
+}
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+{
+    width: 14px;
+    height: 14px;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: black;
+    width: 14px;
+    height: 14px;
+    background-color: transparent;
+}
+
+
+/*------------------NEWS------------------*/
+
+.title {
+    width: 100%;
+    height: 40px;
+    margin: 40px 0 30px 0;
+    border-left: 5px solid #335fab;
+    background-color: #e8e8e8;
+}
+
+h4 {
+    float: left;
+    font-family: "PTSansBold", sans-serif;
+    font-size: 16px;
+    color: #335fab;
+    text-transform: uppercase;
+    padding: 10px 0 0 10px;
+}
+
+.title > a{
+    display: inline-block;
+    float: right;
+    margin-right: 70px;
+    padding-top: 10px;
+    font-family: "PTSansRegular", sans-serif;
+    font-size: 12px;
+    color: #335fab;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(51, 95, 171, 0.2);
+}
+
+.slider_news {
+    width: 100%;
+    height: 400px;
+}
+
+.sl_news {
+    display: inline-block;
+    vertical-align: top;
+    width: 270px;
+    height: 100%;
+    margin-right: 30px;
+    outline: 0;
+    /*border: 1px solid red;*/
+}
+
+.img_block {
+    width: 100%;
+    height: 150px;
+}
+
+.img_block img {
+    width: 100%;
+    height: auto;
+}
+
+.description h3 {
+    font-family: "PTSansBold", sans-serif;
+    /*text-decoration: underline;*/
+    padding-left: 0;
+}
+
+.description h3 a{
+    display: block;
+    color: #3d3d3d;
+    text-decoration: none;
+    padding-top: 10px;
+}
+
+.description h3 a:hover {
+    color: #335fab;
+    text-decoration: underline;
+}
+
+p {
+    font-family: "PTSansRegular", sans-serif;
+    font-size: 14px;
+    color: #3d3d3d;
+    line-height: 22px;
+    padding: 10px 0;
+}
+
+.link {
+    width: 100%;
+    height: 30px;
+    padding-top: 6px;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.link a{
+    float: left;
+    display: inline-block;
+    font-family: "PTSansBold", sans-serif;
+    font-size: 12px;
+    color: #335fab;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.link span {
+    float: right;
+    display: inline-block;
+    font-family: "PTSansRegular", sans-serif;
+    font-size: 12px;
+    color: #1a1a1a;
+}
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    top: -50px;
+    display: block;
+    width: 16px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: transparent;
+    /*border: none;*/
+    outline: none;
+    background: transparent;
+    z-index: 1001;
+    /*border: 1px solid red;*/
+}
+
+.slick-prev {
+    background: url("../../assets/images/arrow_left.png") center no-repeat;
+    left: 95%;
+}
+
+/*[dir='rtl'] .slick-prev {*/
+    /*right: -25px;*/
+    /*left: auto;*/
+/*}*/
+
+.slick-prev:before {
+    content: '';
+}
+
+[dir='rtl'] .slick-prev:before {
+    content: '';
+}
+
+.slick-next {
+    background: url("../../assets/images/arrow_right.png") center no-repeat;
+    right: 1.8%;
+}
+
+
+/*[dir='rtl'] .slick-next {*/
+    /*right: auto;*/
+    /*left: -25px;*/
+/*}*/
+.slick-next:before {
+    content: '';
+}
+
+
+[dir='rtl'] .slick-next:before {
+    content: '';
+}
+
+
+/*------------------ABOUT------------------*/
+
+.information {
+    margin-top: 30px;
+    padding: 25px 0 40px 0;
+    border-top: 3px solid #335fab;
+}
+
+.information h3{
+    font-family: "PTSansBold", sans-serif;
+    color: #3d3d3d;
+    text-transform: uppercase;
+    padding-left: 0;
+}
+
+
+footer{
+    background-color: #414141;
+    padding: 20px 0 30px 0;
+}
+
+.footer a{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.contacts {
+    display: inline-block;
+    vertical-align: middle;
+    width: 59.82905982905983%;
+    margin-left: 30px;
+}
+
+h6 {
+    font-family: "PTSansBold", sans-serif;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.contacts p {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 0;
+}
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+----------------------------------------------------GROUPS----------------------------------------------------------
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+.g_content {
+    padding-top: 35px;
+    padding-bottom: 10px;
+}
+
+.g_content h4 {
+    color: #3d3d3d;
+    float: none;
+    padding: 0;
+}
+
+.g_container {
+    background-color: #f3f3f3;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    padding: 20px 1.709401709401709%;
+}
+
+.g_block,
+.g_desc {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.g_block {
+    width: 23.89380530973451%;
+    height: 200px;
+    overflow: hidden;
+    /*border: 1px solid red;*/
+}
+
+.g_block img {
+    width: 100%;
+    height: auto;
+}
+
+.g_desc {
+    width: 76.10619469026549%;
+    padding-left: 2%;
+}
+
+.g_desc h3 {
+    font-family: "PTSansBold", sans-serif;
+    color: #3a3a3a;
+    padding-left: 0;
+}
+
+.g_desc p {
+    padding: 14px 0 0 0;
+    line-height: 24px;
+}
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+--------------------------------------------------COUNTRIES----------------------------------------------------------
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+
+.c_desc h3 {
+    line-height: 18px;
+}
+
+.c_desc h3 img {
+    vertical-align: bottom;
+    margin-right: 10px;
+ }
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+----------------------------------------------------MEMBERS----------------------------------------------------------
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+.m_content {
+    padding-top: 40px;
+}
+
+.m_content h4 {
+    float: none;
+    text-align: center;
+}
+
+.members {
+    background-color: #f3f3f3;
+    text-align: center;
+    margin: 30px 0 40px 0;
+    padding: 30px 0 50px 0;
+}
+
+.member {
+    display: inline-block;
+    vertical-align: top;
+    width: 17.09401709401709%;
+    height: auto;
+    margin: 0 2.905982905982906% 20px 2.905982905982906%;
+}
+
+.member h3 {
+    padding-left: 0;
+    text-align: center;
+}
+
+.member h3 a {
+    color: #000;
+}
+
+.member h3 a:hover {
+    text-decoration: none;
+}
+
+.member h3 span {
+    font-family: "PTSansBold", sans-serif;
+    /*text-transform: uppercase;*/
+}
+
+.m_img {
+    width: 100%;
+    height: 280px;
+    margin: 10px 0;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.m_img img {
+    width: 100%;
+    height: 100%;
+}
+
+.line {
+    background-color: #b4b3b3;
+    width: 80px;
+    height: 4px;
+    margin: 0 auto;
+}
+
+.member > p:first-of-type {
+    font-size: 16px;
+    padding-bottom: 0;
+}
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+----------------------------------------------------PARTNERS--------------------------------------------------------
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+.p_content {
+    padding-top: 30px;
+}
+
+.p_content h4 {
+    float: none;
+    text-align: center;
+}
+
+.partners {
+    text-align: center;
+    margin: 30px 0 40px 0;
+}
+
+.partner {
+    background-color: #f3f3f3;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    text-decoration: none;
+    width: 300px;
+    height: auto;
+    margin: 0 1% 20px 1%;
+    padding: 0.5%;
+}
+
+.p_img {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+.p_img img {
+    width: 100%;
+    height: 100%;
+}
+
+.partner h3 {
+    padding: 10px 0 0 0;
+    color: #335fab;
+}
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+----------------------------------------------------KONULAR--------------------------------------------------------
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+.n_bg {
+    background-color: #f3f3f3;
+}
+
+.n_content {
+    padding-bottom: 40px;
+}
+
+.tabs-nav{
+    width: 100%;
+    padding: 40px 0;
+    text-align: center;
+    list-style: none;
+}
+
+.tabs-nav li{
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.tabs-nav a{
+    background-color: #fff;
+    font-family: "PTSansRegular", sans-serif;
+    font-size: 12px;
+    color: #0c1723;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 28px;
+    display: inline-block;
+    width: 160px;
+    height: 30px;
+    border-radius: 25px;
+    border: 2px solid #335fab;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+
+.tabs-nav a:hover{
+    color: #335fab;
+}
+
+.tabs-nav a.tab-active{
+    background-color: #335fab;
+    color: #fff;
+}
+
+.all_news .sl_news {
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.all_news > div:nth-child(4n) {
+    margin-right: 0;
+}
+
+.all_news .description {
+    padding: 0 5px;
+}
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+-------------------------------------------------------S-POST--------------------------------------------------------
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+.article{
+    background-color: #f3f3f3;
+}
+
+.article_container{
+    padding: 50px 0;
+}
+
+.article_block{
+    position: relative;
+    background-color: #fff;
+    padding: 30px 4.273504273504274% 50px 4.273504273504274%;
+    border: 1px solid #dcdcdc;
+}
+
+.article_block h4{
+    float: none;
+    padding: 0 0 10px 0;
+}
+
+
+.article_block > span{
+    display: inline-block;
+    font-family: "PTSansRegular", sans-serif;
+    font-size: 14px;
+    color: #0c1723;
+}
+
+.article_img{
+    width: 100%;
+    height: 450px;
+    padding: 10px 0;
+}
+
+.article_img img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.post_share{
+    font-family: "PTSansRegular", sans-serif;
+    font-size: 14px;
+    color: #0c1723;
+    list-style: none;
+    margin-top: 45px;
+}
+
+.post_share li{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+.post_share li:first-child{
+    margin-right: 30px;
+}
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+----------------------------------------------------CONTACTS--------------------------------------------------------
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+
+.contacts_content {
+    padding-top: 20px;
+}
+
+.contacts_content h4 {
+    float: none;
+    text-align: center;
+}
+
+.contacts_block {
+    background-color: #f3f3f3;
+    text-align: center;
+    margin: 30px 0;
+    padding: 40px 0 0 0;
+}
+
+.m_information,
+.form {
+    display: inline-block;
+    vertical-align: top;
+    width: 41.88034188034188%;
+}
+
+.m_information {
+    font-size: 16px;
+    color: #1e1a1b;
+    list-style: none;
+    text-align: left;
+    padding-top: 20px;
+}
+
+.m_information li {
+    padding-left: 30px;
+}
+
+.m_information li:nth-child(odd) {
+    font-family: "PTSansBold", sans-serif;
+    margin-bottom: 10px;
+}
+
+.m_information li:nth-child(even) {
+    font-family: "PTSansRegular", sans-serif;
+    margin-bottom: 20px;
+}
+
+.m_information li:first-child {
+    background: url("../images/location.png") left center no-repeat;
+}
+
+.m_information li:nth-child(3) {
+    background: url("../images/phone_number.png") left center no-repeat;
+}
+
+.m_information li:nth-child(5) {
+    background: url("../images/email.png") left center no-repeat;
+}
+
+.form {
+    position: relative;
+    background: url("../images/form_bg3.jpg") center no-repeat;
+    font-family: "PTSansItalic", sans-serif;
+    font-size: 14px;
+    color: #747474;
+    padding: 30px 0 20px 0;
+}
+
+.form h3 {
+    padding: 0 0 25px 0;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.form label {
+    display: block;
+    width: 60%;
+    height: 35px;
+    margin: 0 auto 20px auto;
+}
+
+/*.form label:nth-child(3){*/
+    /*height: 105px;*/
+/*}*/
+
+.form label input {
+    width: 100%;
+    height: 100%;
+    padding-left: 5px;
+    border: 0;
+    outline: 0;
+}
+
+.form textarea {
+    width: 60%;
+    height: 105px;
+    margin-bottom: 20px;
+    padding: 5px 0 0 5px;
+    border: 0;
+    outline: 0;
+    resize: none;
+}
+
+.form input[type="submit"] {
+    background-color: transparent;
+    font-family: "PTSansBold", sans-serif;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+.iframe {
+    width: 100%;
+    height: 350px;
+    margin-top: 30px;
+}
+
+.iframe iframe {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+------------------------------------------------------BOOKS----------------------------------------------------------
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+.b_bg {
+    background-color: #f3f3f3;
+}
+
+.b_content {
+    padding: 30px 0 60px 0;
+}
+
+.b_content h4 {
+    float: none;
+    text-align: center;
+}
+
+.books {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.book {
+    background-color: #fff;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    width: 47.00854700854701%;
+    height: auto;
+    margin: 20px 1%;
+    padding: 20px 0.5%;
+    border: 2px solid #224484;
+    border-radius: 10px;
+}
+
+.book_img,
+.book_desc {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.book_img {
+    width: 175px;
+    height: 260px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.book_img img {
+    width: 100%;
+    height: 100%;
+}
+
+.book_desc {
+    width: 347px;
+    margin-left: 10px;
+    list-style: none;
+}
+
+.book_desc li {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 10px;
+}
+
+.book_desc li:nth-child(even) {
+    font-family: "PTSansRegular", sans-serif;
+    font-size: 14px;
+    color: #1e1a1b;
+    width: 147px;
+}
+
+.book_desc li:nth-child(odd) {
+    font-family: "PTSansBold", sans-serif;
+    font-size: 14px;
+    color: #1e1a1b;
+    width: 195px;
+}
+
+.book_desc li:first-child {
+    width: 100%;
+}
+
+.book_desc li:first-child h3 {
+    padding-left: 0;
+}
+
+.book_desc li:nth-child(8){
+    width: 100%;
+}
+
+.book_desc li:last-child a {
+    color: #224484;
+}
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+------------------------------------------------------PROJECTS-------------------------------------------------------
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+
+.project_bg {
+    background-color: #f3f3f3;
+}
+
+.project_content {
+    padding: 30px 0 80px 0;
+}
+
+.project_content h4 {
+    float: none;
+    text-align: center;
+}
+
+.projects {
+    padding: 30px 0;
+    /*font-size: 0;*/
+}
+
+.project {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 33%;
+    height: 250px;
+    border: 1px solid #f3f3f3;
+    border-right: 0;
+    border-bottom: 0;
+    box-sizing: border-box;
+}
+
+.project_img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.project_img img {
+    width: 100%;
+    height: 100%;
+}
+
+.project_desc {
+    /*background-color: #335fab;*/
+    position: absolute;
+    top: 40%;
+    left: 1px;
+    transform: translateY(-50%);
+    display: inline-block;
+    max-width: 90%;
+    height: auto;
+    z-index: 10;
+    /*padding: 10px;*/
+    /*border: 1px solid red;*/
+}
+
+.project_desc > div:first-of-type {
+    /*display: inline;*/
+    font-family: "PTSansRegular", sans-serif;
+    font-size: 14px;
+    color: #fff;
+}
+
+.project_desc > div:last-of-type {
+    /*display: block;*/
+    /*width: auto;*/
+    font-family: "PTSansBold", sans-serif;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.project_desc span {
+    display: inline-block;
+    background-color: #335fab;
+}
+
+.project_desc > div:first-of-type span {
+    padding: 10px 10px 0 10px;
+}
+
+.project_desc > div:last-of-type span {
+    padding: 10px;
+}
+
+.project_hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    opacity: 0;
+}
+
+.project:hover .project_hover {
+    opacity: 1;
+}
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+-------------------------------------------------SINGLE-PROJECTS-----------------------------------------------------
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+.s_project .gallery {
+    padding-top: 20px;
+}
+
+.s_project .gallery .g_img {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 270px;
+    height: 200px;
+    margin: 0 5px 10px 0;
+    text-decoration: none;
+}
+
+.s_project .gallery .g_img:nth-child(4n) {
+    margin-right: 0;
+}
+
+.s_project .g_img img {
+    width: 100%;
+    height: 100%;
+}
+
+.shoot_hover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5) url("../../assets/images/shoot_hover.png") center no-repeat;
+    opacity: 0;
+}
+
+.g_img:hover .shoot_hover {
+    opacity: 1;
+}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+---------------------------------------------------ACTIVITIES--------------------------------------------------------
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+.a_bg {
+    background-color: #f3f3f3;
+}
+
+.a_content {
+    padding: 30px 0 50px 0;
+}
+
+.a_content h4 {
+    float: none;
+    text-align: center;
+}
+
+.activities {
+    padding: 30px 0;
+}
+
+.activities > div:nth-child(4n) {
+    margin-right: 0;
+}
+
+.activities .sl_news {
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.activities .description {
+    padding: 0 8px;
+}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+-------------------------------------------------------ABOUT--------------------------------------------------------
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+.about_content {
+    padding: 30px 0 60px 0;
+}
+
+.about_content h4 {
+    float: none;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+----------------------------------------------------MAIN-PAGE----------------------------------------------------------
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/

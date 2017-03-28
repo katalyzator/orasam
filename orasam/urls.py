@@ -20,6 +20,7 @@ from django.contrib import admin
 from orasam import settings
 
 urlpatterns = patterns('',
+                       url(r'^$', 'main.views.index_view', name='index'),
                        url(r'^admin/', admin.site.urls),
                        )
 
