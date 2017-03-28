@@ -27,3 +27,10 @@ def all_news_view(request):
     template = 'all_news.html'
 
     return render(request, template, context)
+
+
+def book_view(request):
+    context = {}
+    template = 'books.html'
+
+    return render(request, template, context)
