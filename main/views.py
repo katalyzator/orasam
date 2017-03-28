@@ -62,3 +62,10 @@ def member_view(request):
     template = 'members.html'
 
     return render(request, template, context)
+
+
+def partners_view(request):
+    context = {}
+    template = 'partners.html'
+
+    return render(request, template, context)
