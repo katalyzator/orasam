@@ -69,3 +69,10 @@ def partners_view(request):
     template = 'partners.html'
 
     return render(request, template, context)
+
+
+def projects_view(request):
+    context = {}
+    template = 'projects.html'
+
+    return render(request, template, context)
