@@ -22,6 +22,7 @@ from orasam import settings
 urlpatterns = patterns('',
                        url(r'^$', 'main.views.index_view', name='index'),
                        url(r'^admin/', admin.site.urls),
+                       url(r'^about/', 'main.views.about_view', name='about'),
                        )
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
