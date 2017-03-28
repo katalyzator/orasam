@@ -24,6 +24,7 @@ urlpatterns = patterns('',
                        url(r'^admin/', admin.site.urls),
                        url(r'^about/', 'main.views.about_view', name='about'),
                        url(r'^activities/', 'main.views.acitivity_view', name='activity'),
+                       url(r'^news/', 'main.views.all_news_view', name='news'),
                        )
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

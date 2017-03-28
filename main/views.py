@@ -20,3 +20,10 @@ def acitivity_view(request):
     template = 'activities.html'
 
     return render(request, template, context)
+
+
+def all_news_view(request):
+    context = {}
+    template = 'all_news.html'
+
+    return render(request, template, context)
