@@ -1,0 +1,56 @@
+{% extends 'main/base.html' %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+    <div class="contacts_bg">
+        <div class="contacts_content grid">
+            <h4>Наши контакты</h4>
+
+            <div class="contacts_block">
+                <ul class="m_information">
+                    <li>Адрес:</li>
+                    <li>Cengiz Aytmatov Kampüsü, Uygulama ve Araştırma Merkezleri Binası, Kırgızistan-Türkiye "Manas"
+                        Üniversitesi, Cal, Bişkek, Kırgızistan
+                    </li>
+                    <li>Контакты:</li>
+                    <li>0312-25-31-28</li>
+                    <li>E-mail:</li>
+                    <li>orasam@manas.edu.kg</li>
+                </ul>
+
+                <form method="post" action="#" class="form">
+
+                    <!--<div class="opacity_bg"></div>-->
+
+                    <h3>Напишите нам!</h3>
+
+                    <label for="name">
+                        <input type="text" id="name" placeholder="Ваше имя">
+                    </label>
+
+                    <label for="email">
+                        <input type="email" id="email" placeholder="Ваш e-mail">
+                    </label>
+
+                    <!--<label for="comments">-->
+                    <textarea cols="20" rows="10" placeholder="Сообщение"></textarea>
+                    <!--</label>-->
+
+                    <label>
+                        <input type="submit" value="Отправить">
+                    </label>
+                </form>
+
+                <div class="iframe">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2925.774579626344!2d74.5728474150426!3d42.835375279157844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389ec9ebd50abdf1%3A0x14ce488dddb2fbdb!2z0JrRi9GA0LPRi9C30YHQutC-LdCi0YPRgNC10YbQutC40Lkg0YPQvdC40LLQtdGA0YHQuNGC0LXRgiAi0JzQsNC90LDRgSI!5e0!3m2!1sru!2sru!4v1490540754128"
+                            frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+{% endblock %}

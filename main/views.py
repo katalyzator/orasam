@@ -34,3 +34,10 @@ def book_view(request):
     template = 'books.html'
 
     return render(request, template, context)
+
+
+def contacts_view(request):
+    context = {}
+    template = 'contacts.html'
+
+    return render(request, template, context)
