@@ -13,3 +13,10 @@ def about_view(request):
     template = 'about.html'
 
     return render(request, template, context)
+
+
+def acitivity_view(request):
+    context = {}
+    template = 'activities.html'
+
+    return render(request, template, context)
