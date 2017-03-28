@@ -48,3 +48,10 @@ def country_view(request):
     template = 'countries.html'
 
     return render(request, template, context)
+
+
+def group_view(request):
+    context = {}
+    template = 'groups.html'
+
+    return render(request, template, context)
