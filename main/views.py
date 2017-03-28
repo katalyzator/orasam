@@ -55,3 +55,10 @@ def group_view(request):
     template = 'groups.html'
 
     return render(request, template, context)
+
+
+def member_view(request):
+    context = {}
+    template = 'members.html'
+
+    return render(request, template, context)
