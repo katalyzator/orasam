@@ -41,3 +41,10 @@ def contacts_view(request):
     template = 'contacts.html'
 
     return render(request, template, context)
+
+
+def country_view(request):
+    context = {}
+    template = 'countries.html'
+
+    return render(request, template, context)
