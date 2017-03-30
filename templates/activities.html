@@ -2,167 +2,30 @@
 
 {% load staticfiles %}
 
-
-
 {% block content %}
-
-
     <div class="a_bg">
         <div class="a_content grid">
             <h4>Duyurular</h4>
 
             <div class="activities">
-                <div class="sl_news">
-                    <div class="img_block">
-                        <img src="assets/images/news_img1.jpg" alt="image">
-                    </div>
-                    <div class="description">
-                        <h3><a href="#">Türk Üniversiteler Birliği Öğrenci Konseyi KTMÜ'de Toplandı</a></h3>
+                {% for item in events %}
+                    <div class="sl_news">
+                        <div class="img_block">
+                            <img src="{{ item.image.url }}" alt="image">
+                        </div>
+                        <div class="description">
+                            <h3><a href="#">{{ item.title }}</a></h3>
 
-                        <p>Orta Asya Araştırma Merkezi Siyaset Bilimi ve Uluslararası İlişkiler, İktisat, Sosyoloji ve
-                            Eğitim olmak üzere dört uzmanlık grubundan oluşmakta ve bu alanlar çerçevesinde faaliyet
-                            yürütmektedir. Araştırmacılara yardımcı...
-                        </p>
+                            <p>{{ item.description }}
+                            </p>
 
-                        <div class="link group">
-                            <a href="#">REad more</a>
-                            <span>16.02.2017</span>
+                            <div class="link group">
+                                <a href="#">REad more</a>
+                                <span>16.02.2017</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="sl_news">
-                    <div class="img_block">
-                        <img src="assets/images/news_img1.jpg" alt="image">
-                    </div>
-                    <div class="description">
-                        <h3><a href="#">Türk Üniversiteler Birliği Öğrenci Konseyi KTMÜ'de Toplandı</a></h3>
-
-                        <p>Orta Asya Araştırma Merkezi Siyaset Bilimi ve Uluslararası İlişkiler, İktisat, Sosyoloji ve
-                            Eğitim olmak üzere dört uzmanlık grubundan oluşmakta ve bu alanlar çerçevesinde faaliyet
-                            yürütmektedir. Araştırmacılara yardımcı...
-                        </p>
-
-                        <div class="link group">
-                            <a href="#">REad more</a>
-                            <span>16.02.2017</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sl_news">
-                    <div class="img_block">
-                        <img src="assets/images/news_img1.jpg" alt="image">
-                    </div>
-                    <div class="description">
-                        <h3><a href="#">Türk Üniversiteler Birliği Öğrenci Konseyi KTMÜ'de Toplandı</a></h3>
-
-                        <p>Orta Asya Araştırma Merkezi Siyaset Bilimi ve Uluslararası İlişkiler, İktisat, Sosyoloji ve
-                            Eğitim olmak üzere dört uzmanlık grubundan oluşmakta ve bu alanlar çerçevesinde faaliyet
-                            yürütmektedir. Araştırmacılara yardımcı...
-                        </p>
-
-                        <div class="link group">
-                            <a href="#">REad more</a>
-                            <span>16.02.2017</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sl_news">
-                    <div class="img_block">
-                        <img src="assets/images/news_img1.jpg" alt="image">
-                    </div>
-                    <div class="description">
-                        <h3><a href="#">Türk Üniversiteler Birliği Öğrenci Konseyi KTMÜ'de Toplandı</a></h3>
-
-                        <p>Orta Asya Araştırma Merkezi Siyaset Bilimi ve Uluslararası İlişkiler, İktisat, Sosyoloji ve
-                            Eğitim olmak üzere dört uzmanlık grubundan oluşmakta ve bu alanlar çerçevesinde faaliyet
-                            yürütmektedir. Araştırmacılara yardımcı...
-                        </p>
-
-                        <div class="link group">
-                            <a href="#">REad more</a>
-                            <span>16.02.2017</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sl_news">
-                    <div class="img_block">
-                        <img src="assets/images/news_img1.jpg" alt="image">
-                    </div>
-                    <div class="description">
-                        <h3><a href="#">Türk Üniversiteler Birliği Öğrenci Konseyi KTMÜ'de Toplandı</a></h3>
-
-                        <p>Orta Asya Araştırma Merkezi Siyaset Bilimi ve Uluslararası İlişkiler, İktisat, Sosyoloji ve
-                            Eğitim olmak üzere dört uzmanlık grubundan oluşmakta ve bu alanlar çerçevesinde faaliyet
-                            yürütmektedir. Araştırmacılara yardımcı...
-                        </p>
-
-                        <div class="link group">
-                            <a href="#">REad more</a>
-                            <span>16.02.2017</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sl_news">
-                    <div class="img_block">
-                        <img src="assets/images/news_img1.jpg" alt="image">
-                    </div>
-                    <div class="description">
-                        <h3><a href="#">Türk Üniversiteler Birliği Öğrenci Konseyi KTMÜ'de Toplandı</a></h3>
-
-                        <p>Orta Asya Araştırma Merkezi Siyaset Bilimi ve Uluslararası İlişkiler, İktisat, Sosyoloji ve
-                            Eğitim olmak üzere dört uzmanlık grubundan oluşmakta ve bu alanlar çerçevesinde faaliyet
-                            yürütmektedir. Araştırmacılara yardımcı...
-                        </p>
-
-                        <div class="link group">
-                            <a href="#">REad more</a>
-                            <span>16.02.2017</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sl_news">
-                    <div class="img_block">
-                        <img src="assets/images/news_img1.jpg" alt="image">
-                    </div>
-                    <div class="description">
-                        <h3><a href="#">Türk Üniversiteler Birliği Öğrenci Konseyi KTMÜ'de Toplandı</a></h3>
-
-                        <p>Orta Asya Araştırma Merkezi Siyaset Bilimi ve Uluslararası İlişkiler, İktisat, Sosyoloji ve
-                            Eğitim olmak üzere dört uzmanlık grubundan oluşmakta ve bu alanlar çerçevesinde faaliyet
-                            yürütmektedir. Araştırmacılara yardımcı...
-                        </p>
-
-                        <div class="link group">
-                            <a href="#">REad more</a>
-                            <span>16.02.2017</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sl_news">
-                    <div class="img_block">
-                        <img src="assets/images/news_img1.jpg" alt="image">
-                    </div>
-                    <div class="description">
-                        <h3><a href="#">Türk Üniversiteler Birliği Öğrenci Konseyi KTMÜ'de Toplandı</a></h3>
-
-                        <p>Orta Asya Araştırma Merkezi Siyaset Bilimi ve Uluslararası İlişkiler, İktisat, Sosyoloji ve
-                            Eğitim olmak üzere dört uzmanlık grubundan oluşmakta ve bu alanlar çerçevesinde faaliyet
-                            yürütmektedir. Araştırmacılara yardımcı...
-                        </p>
-
-                        <div class="link group">
-                            <a href="#">REad more</a>
-                            <span>16.02.2017</span>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>

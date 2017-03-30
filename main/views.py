@@ -20,7 +20,8 @@ def about_view(request):
 
 
 def acitivity_view(request):
-    context = {}
+    event = Event.objects.all()
+    context = {"events": event}
     template = 'activities.html'
 
     return render(request, template, context)

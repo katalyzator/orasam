@@ -24,6 +24,7 @@ class News(models.Model):
     title = models.CharField(max_length=255, verbose_name='Заголовок поста')
     description = models.CharField(max_length=1000, verbose_name='Описание поста')
     text = models.TextField(verbose_name='Текст поста')
+    image = models.ImageField(upload_to=transform(pathNews), verbose_name='картинка')
     news_type = models.CharField(choices=TYPE_NEWS, verbose_name='Тип новости', max_length=100)
 
     timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
@@ -41,6 +42,7 @@ class Event(models.Model):
     title = models.CharField(max_length=255, verbose_name='Заголовок поста')
     description = models.CharField(max_length=1000, verbose_name='Описание поста')
     text = models.TextField(verbose_name='Текст поста')
+    image = models.ImageField(upload_to=transform(pathEvent), verbose_name='картинка')
 
     timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
@@ -85,6 +87,7 @@ class Publications(models.Model):
     title = models.CharField(max_length=255, verbose_name='Заголовок поста')
     description = models.CharField(max_length=1000, verbose_name='Описание поста')
     text = models.TextField(verbose_name='Текст поста')
+    image = models.ImageField(upload_to=transform(pathEvent), verbose_name='картинка')
 
     timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)

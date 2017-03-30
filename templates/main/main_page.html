@@ -32,7 +32,7 @@
                     {% for item in events %}
                         <div class="sl_news">
                             <div class="img_block">
-                                <img src="assets/images/news_img1.jpg" alt="image">
+                                <img src="{{ item.image.url }}" alt="image">
                             </div>
                             <div class="description">
                                 <h3><a href="#">{{ item.title }}</a></h3>
@@ -61,7 +61,7 @@
                     {% for item in news %}
                         <div class="sl_news">
                             <div class="img_block">
-                                <img src="assets/images/news_img1.jpg" alt="image">
+                                <img src="{{ item.image.url }}" alt="image">
                             </div>
                             <div class="description">
                                 <h3><a href="#">{{ item.title }}</a></h3>
@@ -91,7 +91,7 @@
                     {% for item in publication %}
                         <div class="sl_news">
                             <div class="img_block">
-                                <img src="assets/images/news_img1.jpg" alt="image">
+                                <img src="{{ item.image.url }}" alt="image">
                             </div>
                             <div class="description">
                                 <h3><a href="#">{{ item.title }}</a></h3>
