@@ -1,8 +1,12 @@
 from django.shortcuts import render
+from .models import *
 
 
 def index_view(request):
-    context = {}
+    news = News.objects.all()
+    event = Event.objects.all()
+    publication = Publications.objects.all()
+    context = {"news": news, "events": event, "publication": publication}
     template = 'main/main_page.html'
 
     return render(request, template, context)
