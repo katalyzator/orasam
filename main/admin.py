@@ -43,6 +43,13 @@ class SliderImageAdmin(admin.ModelAdmin):
         model = SliderImage
 
 
+class PartnersAdmin(admin.ModelAdmin):
+    class Meta:
+        model = Partner
+
+
+admin.site.register(Partner, PartnersAdmin)
+
 admin.site.register(SliderImage, SliderImageAdmin)
 
 admin.site.register(Book, BookAdmin)

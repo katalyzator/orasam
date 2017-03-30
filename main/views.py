@@ -72,7 +72,8 @@ def member_view(request):
 
 
 def partners_view(request):
-    context = {}
+    partners = Partner.objects.all()
+    context = {"partners": partners}
     template = 'partners.html'
 
     return render(request, template, context)

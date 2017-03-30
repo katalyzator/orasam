@@ -141,3 +141,19 @@ class SliderImage(models.Model):
 
     def __unicode__(self):
         return smart_unicode(self.id)
+
+
+class Partner(models.Model):
+    class Meta:
+        verbose_name_plural = 'Партнеры'
+        verbose_name = 'Партнеры'
+
+    title = models.CharField(max_length=255, verbose_name='Название организации')
+    description = models.CharField(max_length=1000, verbose_name='Описание')
+    image = models.ImageField(upload_to=transform('images/partners'), verbose_name='Фотографии(логотип)')
+
+    timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
+    updated = models.DateTimeField(auto_now_add=False, auto_now=True)
+
+    def __unicode__(self):
+        return smart_unicode(self.title)
