@@ -122,5 +122,22 @@ class Book(models.Model):
     description = models.CharField(max_length=255, verbose_name='описание')
     image = models.ImageField(upload_to=transform('images/books'), verbose_name='картинка книги')
 
+    timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
+    updated = models.DateTimeField(auto_now_add=False, auto_now=True)
+
     def __unicode__(self):
         return smart_unicode(self.title)
+
+
+class SliderImage(models.Model):
+    class Meta:
+        verbose_name_plural = 'Картинки слайдера'
+        verbose_name = 'картинки слайдера'
+
+    image = models.ImageField(upload_to=transform('images/sliderimage'), verbose_name='картинка')
+
+    timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
+    updated = models.DateTimeField(auto_now_add=False, auto_now=True)
+
+    def __unicode__(self):
+        return smart_unicode(self.id)

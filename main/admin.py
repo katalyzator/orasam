@@ -38,6 +38,13 @@ class BookAdmin(admin.ModelAdmin):
         model = Book
 
 
+class SliderImageAdmin(admin.ModelAdmin):
+    class Meta:
+        model = SliderImage
+
+
+admin.site.register(SliderImage, SliderImageAdmin)
+
 admin.site.register(Book, BookAdmin)
 
 admin.site.register(NewsImage, NewsImageAdmin)

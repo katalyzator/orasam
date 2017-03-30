@@ -9,17 +9,12 @@
     <main>
         <div class="content1 grid">
             <div class="slider">
-                <div class="sl_slide">
-                    <img src="{% static 'images/sl_image1.jpg' %}" alt="image">
-                </div>
+                {% for item in slides %}
+                    <div class="sl_slide">
+                        <img src="{{ item.image.url }}" alt="image">
+                    </div>
+                {% endfor %}
 
-                <div class="sl_slide">
-                    <img src="{% static 'images/sl_image1.jpg' %}" alt="image">
-                </div>
-
-                <div class="sl_slide">
-                    <img src="{% static 'images/sl_image1.jpg' %}" alt="image">
-                </div>
             </div>
 
             <div class="announcement">

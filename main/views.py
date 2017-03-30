@@ -3,10 +3,11 @@ from .models import *
 
 
 def index_view(request):
+    sliderimage = SliderImage.objects.all()
     news = News.objects.all()
     event = Event.objects.all()
     publication = Publications.objects.all()
-    context = {"news": news, "events": event, "publication": publication}
+    context = {"news": news, "events": event, "publication": publication, "slides": sliderimage}
     template = 'main/main_page.html'
 
     return render(request, template, context)
