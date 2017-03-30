@@ -32,6 +32,9 @@ urlpatterns = patterns('',
                        url(r'^members/', 'main.views.member_view', name='members'),
                        url(r'^partners/', 'main.views.partners_view', name='partners'),
                        url(r'^projects/', 'main.views.projects_view', name='projects'),
+                       url(r'^raporlar/', 'main.views.raporlar_view', name='raporlar'),
+                       url(r'^degerlendirme/', 'main.views.degerlendirme_view', name='degerlendirme'),
+                       url(r'^bultenler/', 'main.views.bulten_view', name='bulten'),
                        )
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

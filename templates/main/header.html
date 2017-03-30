@@ -40,10 +40,10 @@
                 <li>
                     <a href="#">Yayinlar</a>
                     <ul class="submenu">
-                        <li><a href="#">Bültenler</a></li>
-                        <li><a href="#">Değerlendirmeler</a></li>
+                        <li><a href="{% url 'bulten' %}">Bültenler</a></li>
+                        <li><a href="{% url 'degerlendirme' %}">Değerlendirmeler</a></li>
                         <li><a href="#">Makaleler</a></li>
-                        <li><a href="#">Raporlar</a></li>
+                        <li><a href="{% url 'raporlar' %}">Raporlar</a></li>
                         <li><a href="{% url 'book' %}">Kitaplar</a></li>
                     </ul>
                 </li>

@@ -82,3 +82,24 @@ def projects_view(request):
     template = 'projects.html'
 
     return render(request, template, context)
+
+
+def bulten_view(request):
+    context = {}
+    template = 'bultenler.html'
+
+    return render(request, template, context)
+
+
+def degerlendirme_view(request):
+    context = {}
+    template = 'degerlendirmeler.html'
+
+    return render(request, template, context)
+
+
+def raporlar_view(request):
+    context = {}
+    template = 'raporlar.html'
+
+    return render(request, template, context)
