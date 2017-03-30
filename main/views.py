@@ -35,7 +35,8 @@ def all_news_view(request):
 
 
 def book_view(request):
-    context = {}
+    book = Book.objects.all()
+    context = {"books": book}
     template = 'books.html'
 
     return render(request, template, context)

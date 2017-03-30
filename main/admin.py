@@ -34,6 +34,13 @@ class PublicationImageAdmin(admin.ModelAdmin):
         model = PublicationImage
 
 
+class BookAdmin(admin.ModelAdmin):
+    class Meta:
+        model = Book
+
+
+admin.site.register(Book, BookAdmin)
+
 admin.site.register(NewsImage, NewsImageAdmin)
 
 admin.site.register(EventImage, EventImageAdmin)

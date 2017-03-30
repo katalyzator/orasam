@@ -108,3 +108,19 @@ class PublicationImage(models.Model):
 
     def __unicode__(self):
         return smart_unicode(self.publication.title)
+
+
+class Book(models.Model):
+    class Meta:
+        verbose_name_plural = 'Добавление книг'
+        verbose_name = 'Добавление книг'
+
+    title = models.CharField(max_length=255, verbose_name='Название книги')
+    editor = models.CharField(max_length=255, verbose_name='главный редактор')
+    redaktor = models.CharField(max_length=255, verbose_name='редактор')
+    prepare = models.CharField(max_length=255, verbose_name='подготовили')
+    description = models.CharField(max_length=255, verbose_name='описание')
+    image = models.ImageField(upload_to=transform('images/books'), verbose_name='картинка книги')
+
+    def __unicode__(self):
+        return smart_unicode(self.title)
