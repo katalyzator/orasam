@@ -1,3 +1,4 @@
+# coding=utf-8
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -112,4 +113,36 @@ STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "orasam", "static", "stati
 
 STATICFILES_DIRS = (
     os.path.join(os.path.dirname(BASE_DIR), "orasam", "templates", "assets", "static_files"),
+)
+
+
+gettext_noop = lambda s: s
+
+LANGUAGES = (
+    ('ru', 'Кыргызский'),
+    ('en', 'Английский'),
+    ('tr', 'Турецкий'),
+    ('az', 'Азербайджанский'),
+    ('kg', gettext_noop('Kyrgyz')),
+)
+
+EXTRA_LANG_INFO = {
+    'kg': {
+        'bidi': True,  # right-to-left
+        'code': 'kg',
+        'name': 'Kyrgyz',
+        'name_local': u'\u0626\u06C7\u064A\u063A\u06C7\u0631 \u062A\u0649\u0644\u0649',  # unicode codepoints here
+    },
+}
+
+# Add custom languages not provided by Django
+import django.conf.locale
+
+LANG_INFO = dict(django.conf.locale.LANG_INFO.items() + EXTRA_LANG_INFO.items())
+django.conf.locale.LANG_INFO = LANG_INFO
+
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'tr'
+
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
 )

@@ -1,0 +1,2 @@
+django-modeltranslation
+solid_i18n
