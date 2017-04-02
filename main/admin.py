@@ -2,19 +2,38 @@
 from django.contrib import admin
 
 from main.models import *
+from modeltranslation.admin import TabbedExternalJqueryTranslationAdmin
+from modeltranslation.translator import TranslationOptions, translator
 
 
-class NewsAdmin(admin.ModelAdmin):
+class NewsTranslationOptions(TranslationOptions):
+    fields = ('title', 'description', 'text')
+
+
+class EventTranslationOptions(TranslationOptions):
+    fields = ('title', 'description', 'text')
+
+
+class PublicationsTranslationOptions(TranslationOptions):
+    fields = ('title', 'description', 'text')
+
+
+translator.register(News, NewsTranslationOptions)
+translator.register(Event, EventTranslationOptions)
+translator.register(Publications, PublicationsTranslationOptions)
+
+
+class NewsAdmin(TabbedExternalJqueryTranslationAdmin):
     class Meta:
         model = News
 
 
-class EventAdmin(admin.ModelAdmin):
+class EventAdmin(TabbedExternalJqueryTranslationAdmin):
     class Meta:
         model = Event
 
 
-class PublicationAdmin(admin.ModelAdmin):
+class PublicationAdmin(TabbedExternalJqueryTranslationAdmin):
     class Meta:
         model = Publications
 

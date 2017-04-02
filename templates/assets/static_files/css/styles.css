@@ -198,7 +198,7 @@ nav{
     width: 100%;
     height: 30px;
     padding-left: 10px;
-    background: #335fab url("../../assets/images/search_icon.png") 95% center no-repeat;
+    background: #335fab url("../images/search_icon.png") 95% center no-repeat;
     border: none;
     outline: 0;
 }
@@ -412,7 +412,7 @@ p {
 }
 
 .slick-prev {
-    background: url("../../assets/images/arrow_left.png") center no-repeat;
+    background: url("../images/arrow_left.png") center no-repeat;
     left: 95%;
 }
 
@@ -430,7 +430,7 @@ p {
 }
 
 .slick-next {
-    background: url("../../assets/images/arrow_right.png") center no-repeat;
+    background: url("../images/arrow_right.png") center no-repeat;
     right: 1.8%;
 }
 
@@ -1177,7 +1177,7 @@ h6 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5) url("../../assets/images/shoot_hover.png") center no-repeat;
+    background: rgba(0, 0, 0, 0.5) url("../images/shoot_hover.png") center no-repeat;
     opacity: 0;
 }
 
