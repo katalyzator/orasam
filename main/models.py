@@ -121,6 +121,7 @@ class Book(models.Model):
     prepare = models.CharField(max_length=255, verbose_name='подготовили')
     description = models.CharField(max_length=255, verbose_name='описание')
     image = models.ImageField(upload_to=transform('images/books'), verbose_name='картинка книги')
+    link_download = models.URLField(verbose_name='ссылка для скачивания')
 
     timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)

@@ -25,7 +25,8 @@
                             <li>{{ item.prepare }}</li>
                             <li>{{ item.description }}
                             </li>
-                            <li><a href="#">Kitabı indirmek için tıklayınız</a></li>
+                            <li><a href="{{ item.link_download }}" target="_blank">Kitabı indirmek için tıklayınız</a>
+                            </li>
                         </ul>
                     </div>
                 {% endfor %}
