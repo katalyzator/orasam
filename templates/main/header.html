@@ -1,5 +1,5 @@
 {% load staticfiles %}
-
+{% load i18n %}
 <header>
     <div class="header grid group">
         <div class="logo">
@@ -31,7 +31,7 @@
                 </li>
                 <li><a href="{% url 'activity' %}">Etkinlikler</a></li>
                 <li>
-                    <a href="{% url 'news' %}">Haberler</a>
+                    <a href="{% url 'news' %}">{% trans 'news' %}</a>
                     <ul class="submenu">
                         <li><a href="{% url 'country' %}">Ulkeler</a></li>
                         <li><a href="#">Konular</a></li>

@@ -1,10 +1,11 @@
 from django.conf.urls import url, patterns, include
 from django.conf.urls.static import static
 from django.contrib import admin
+from solid_i18n.urls import solid_i18n_patterns
 
 from orasam import settings
 
-urlpatterns = patterns('',
+urlpatterns = solid_i18n_patterns('',
                        url(r'^jet/', include('jet.urls', 'jet')),
                        url(r'^$', 'main.views.index_view', name='index'),
                        url(r'^admin/', admin.site.urls),

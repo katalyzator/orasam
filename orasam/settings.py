@@ -26,10 +26,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
+    'modeltranslation',
 ]
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -37,6 +39,7 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'solid_i18n.middleware.SolidLocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'orasam.urls'
@@ -95,7 +98,7 @@ JET_DEFAULT_THEME = 'green'
 
 JET_SIDE_MENU_COMPACT = True
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'tr'
 
 TIME_ZONE = 'UTC'
 
@@ -119,10 +122,9 @@ STATICFILES_DIRS = (
 gettext_noop = lambda s: s
 
 LANGUAGES = (
-    ('ru', 'Кыргызский'),
+    ('ru', 'Русский'),
     ('en', 'Английский'),
     ('tr', 'Турецкий'),
-    ('az', 'Азербайджанский'),
     ('kg', gettext_noop('Kyrgyz')),
 )
 
