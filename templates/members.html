@@ -4,90 +4,23 @@
 
 {% block content %}
 
-<div class="m_bg">
-    <div class="m_content grid">
-        <h4>Kadromuz</h4>
-
-        <div class="members">
-            <div class="member">
-                <h3><a href="#">Виталий <span>Захаревский</span></a></h3>
-
-                <div class="m_img">
-                    <img src="{% static 'images/member1.jpg' %}" alt="image">
-                </div>
-
-                <div class="line"></div>
-
-                <p>Реализатор проектов</p>
-                <p>Руководит командой и курирует проекты по дизайну интерьера и реализации. </p>
-            </div>
-
-            <div class="member">
-                <h3><a href="#">Виталий <span>Захаревский</span></a></h3>
-
-                <div class="m_img">
-                    <img src="{% static 'images/member1.jpg' %}" alt="image">
-                </div>
-
-                <div class="line"></div>
-
-                <p>Реализатор проектов</p>
-                <p>Руководит командой и курирует проекты по дизайну интерьера и реализации. Руководит командой и курирует проекты по дизайну интерьера и реализации.</p>
-            </div>
-
-            <div class="member">
-                <h3><a href="#">Виталий <span>Захаревский</span></a></h3>
-
-                <div class="m_img">
-                    <img src="{% static 'images/member1.jpg' %}" alt="image">
-                </div>
-
-                <div class="line"></div>
-
-                <p>Реализатор проектов</p>
-                <p>Руководит командой и курирует проекты по дизайну интерьера и реализации.</p>
-            </div>
-
-            <div class="member">
-                <h3><a href="#">Виталий <span>Захаревский</span></a></h3>
-
-                <div class="m_img">
-                    <img src="assets/images/member1.jpg" alt="image">
-                </div>
-
-                <div class="line"></div>
-
-                <p>Реализатор проектов</p>
-                <p>Руководит командой и курирует проекты по дизайну интерьера и реализации. Руководит командой и курирует проекты по дизайну интерьера и реализации.</p>
-            </div>
-
-            <div class="member">
-                <h3><a href="#">Виталий <span>Захаревский</span></a></h3>
-
-                <div class="m_img">
-                    <img src="assets/images/member1.jpg" alt="image">
-                </div>
-
-                <div class="line"></div>
-
-                <p>Реализатор проектов</p>
-                <p>Руководит командой и курирует проекты по дизайну интерьера и реализации.</p>
-            </div>
-
-            <div class="member">
-                <h3><a href="#">Виталий <span>Захаревский</span></a></h3>
-
-                <div class="m_img">
-                    <img src="assets/images/member1.jpg" alt="image">
-                </div>
-
-                <div class="line"></div>
-
-                <p>Реализатор проектов</p>
-                <p>Руководит командой и курирует проекты по дизайну интерьера и реализации.</p>
+    <div class="m_bg">
+        <div class="m_content grid">
+            <h4>Kadromuz</h4>
+            <div class="members">
+                {% for item in members %}
+                    <div class="member">
+                        <h3><a href="#">{{ item.name }}</a></h3>
+                        <div class="m_img">
+                            <img src="{{ item.image.url }}" alt="image">
+                        </div>
+                        <div class="line"></div>
+                        <p>{{ item.position }}</p>
+                        <p>{{ item.description }} </p>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>
-</div>
 
 {% endblock %}

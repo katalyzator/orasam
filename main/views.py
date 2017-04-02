@@ -66,7 +66,8 @@ def group_view(request):
 
 
 def member_view(request):
-    context = {}
+    members = Employee.objects.all()
+    context = {"members": members}
     template = 'members.html'
 
     return render(request, template, context)
