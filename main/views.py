@@ -29,7 +29,8 @@ def acitivity_view(request):
 
 
 def all_news_view(request):
-    context = {}
+    news = News.objects.all()
+    context = {"news": news}
     template = 'all_news.html'
 
     return render(request, template, context)
