@@ -6,6 +6,10 @@ from modeltranslation.admin import TabbedExternalJqueryTranslationAdmin
 from modeltranslation.translator import TranslationOptions, translator
 
 
+class EmployeeTranslationOptions(TranslationOptions):
+    fields = ('name', 'position', 'description')
+
+
 class NewsTranslationOptions(TranslationOptions):
     fields = ('title', 'description', 'text')
 
@@ -18,9 +22,15 @@ class PublicationsTranslationOptions(TranslationOptions):
     fields = ('title', 'description', 'text')
 
 
+translator.register(Employee, EmployeeTranslationOptions)
 translator.register(News, NewsTranslationOptions)
 translator.register(Event, EventTranslationOptions)
 translator.register(Publications, PublicationsTranslationOptions)
+
+
+class EmployeeAdmin(TabbedExternalJqueryTranslationAdmin):
+    class Meta:
+        model = Employee
 
 
 class NewsAdmin(TabbedExternalJqueryTranslationAdmin):
@@ -67,6 +77,8 @@ class PartnersAdmin(admin.ModelAdmin):
     class Meta:
         model = Partner
 
+
+admin.site.register(Employee, EmployeeAdmin)
 
 admin.site.register(Partner, PartnersAdmin)
 

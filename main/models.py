@@ -157,3 +157,18 @@ class Partner(models.Model):
 
     def __unicode__(self):
         return smart_unicode(self.title)
+
+
+class Employee(models.Model):
+    class Meta:
+        verbose_name_plural = 'Сотрудники'
+        verbose_name = 'Сотрудники'
+
+    name = models.CharField(max_length=255, verbose_name='ФИО сотрудника')
+    position = models.CharField(max_length=255, verbose_name='должность')
+    description = models.CharField(max_length=255, verbose_name='описание должности')
+
+    image = models.ImageField(upload_to=transform('images/employee'), verbose_name='Фотография сотрудника')
+
+    timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
+    updated = models.DateTimeField(auto_now_add=False, auto_now=True)
