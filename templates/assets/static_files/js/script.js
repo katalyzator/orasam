@@ -3,8 +3,20 @@
  */
 
 
+function Show() {
+    $(this).parent('.sub_menu').siblings('a').addClass('hover_link');
+}
 
-$(document).ready(function() {
+function Hide() {
+    $(this).parent('.sub_menu').siblings('a').removeClass('hover_link');
+}
+
+$(document).ready(function () {
+    var menu = $(".sub_menu li");
+
+    menu.on('mouseover', Show);
+    menu.on('mouseout', Hide);
+
     $('.slider_news').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -21,7 +33,7 @@ $('.tabs-stage > div').hide();
 $('.tabs-stage > div:nth-child(1)').show();
 $('.tabs-nav > li:first-child a').addClass('tab-active');
 
-// Изменить класс вкладки и отобразить содержимое
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 $('.tabs-nav > li > a').on('click', function (event) {
     event.preventDefault();
     $('.tabs-nav > li a').removeClass('tab-active');

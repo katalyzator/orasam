@@ -22,6 +22,7 @@ urlpatterns = solid_i18n_patterns('',
                        url(r'^raporlar/', 'main.views.raporlar_view', name='raporlar'),
                        url(r'^degerlendirme/', 'main.views.degerlendirme_view', name='degerlendirme'),
                        url(r'^bultenler/', 'main.views.bulten_view', name='bulten'),
+                       url(r'^mcountries/', 'main.views.makale_country_view', name='mcountry'),
                        )
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

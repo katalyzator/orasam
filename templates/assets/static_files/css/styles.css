@@ -148,7 +148,6 @@ nav{
     position: absolute;
     background-color: #fff;
     width: 180px;
-    /*display: none;*/
     list-style: none;
     z-index: 1001;
     -webkit-box-shadow: 0 2px 22px -4px rgba(0,0,0,0.5);
@@ -156,7 +155,8 @@ nav{
     box-shadow: 0 2px 22px -4px rgba(0,0,0,0.5);
 }
 
-.submenu li{
+.submenu  li{
+    position: relative;
     border-bottom: 1px solid #f3f3f3;
 }
 
@@ -165,10 +165,15 @@ nav{
 }
 
 .submenu a{
-    display: inline-block;
+    display: block;
     color: #3d3d3d;
     text-decoration: none;
     padding: 10px 0 10px 20px;
+}
+
+.sub_menu {
+    top: 0;
+    left: 100%;
 }
 
 .submenu a:hover{
@@ -176,8 +181,17 @@ nav{
     text-decoration: underline;
 }
 
-.menu > li:hover .submenu{
+.menu > li:hover > .submenu{
     display: block;
+}
+
+.submenu > li:hover .sub_menu {
+    display: block;
+}
+
+.submenu > li > a.hover_link {
+    color: #335fab;
+    text-decoration: underline;
 }
 
 .nav_bar form{
@@ -553,9 +567,33 @@ h6 {
 
 
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
---------------------------------------------------COUNTRIES----------------------------------------------------------
+—------------------------------------------------COUNTRIES----------------------------------------------------------
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 
+.c_bg {
+    background-color: #f3f5f7;
+}
+
+.c_content {
+    padding-bottom: 120px;
+}
+
+.c_content h4 {
+    color: #335fab;
+    text-align: center;
+}
+
+.c_content .tabs-stage {
+    background-color: #f3f3f3;
+}
+
+.containers .tabs-nav {
+    padding: 30px 0 15px 0;
+}
+
+.c_content .g_container {
+    background-color: #fff;
+}
 
 .c_desc h3 {
     line-height: 18px;
@@ -565,6 +603,18 @@ h6 {
     vertical-align: bottom;
     margin-right: 10px;
  }
+
+.countries  .all_news > div:nth-child(4n) {
+    margin-right: auto;
+}
+
+/*.all_news .countries .sl_news {*/
+    /*background-color: #f3f3f3;*/
+/*}*/
+
+.countries > div:nth-child(4n) {
+    margin-right: 0;
+}
 
 
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -687,20 +737,26 @@ h6 {
 
 
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-----------------------------------------------------KONULAR--------------------------------------------------------
+—--------------------------------------------------KONULAR------------------------------------------------------—
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 
 .n_bg {
-    background-color: #f3f3f3;
+    background-color: #f3f5f7;
 }
 
 .n_content {
-    padding-bottom: 40px;
+    padding: 25px 0 40px 0;
+}
+
+.n_content h4 {
+    float: none;
+    padding-left: 0;
+    text-align: center;
 }
 
 .tabs-nav{
     width: 100%;
-    padding: 40px 0;
+    padding: 30px 0 45px 0;
     text-align: center;
     list-style: none;
 }
@@ -723,7 +779,7 @@ h6 {
     width: 160px;
     height: 30px;
     border-radius: 25px;
-    border: 2px solid #335fab;
+    border: 1px solid #335fab;
     -webkit-transition: all .2s ease-out;
     -moz-transition: all .2s ease-out;
     -o-transition: all .2s ease-out;
@@ -739,8 +795,13 @@ h6 {
     color: #fff;
 }
 
+.all_news {
+    width: 100%;
+}
+
 .all_news .sl_news {
     background-color: #fff;
+    height: 400px;
     margin-bottom: 20px;
 }
 
@@ -749,7 +810,11 @@ h6 {
 }
 
 .all_news .description {
-    padding: 0 5px;
+    padding: 0 5px 0 10px;
+}
+
+.all_news .sl_news .link {
+    border-bottom: 0;
 }
 
 
@@ -1236,7 +1301,21 @@ h6 {
     text-align: center;
 }
 
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+—-----------------------------------------------------M-NEWS------------------------------------------------------—
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 
+.m_tabs li a {
+    width: 120px;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+—------------------------------------------------M-COUNTRIES------------------------------------------------------—
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+.c_tabs li a {
+    width: 95px;
+}
 
 
 

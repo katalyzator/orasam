@@ -107,3 +107,10 @@ def raporlar_view(request):
     template = 'raporlar.html'
 
     return render(request, template, context)
+
+
+def makale_country_view(request):
+    context = {}
+    template = 'm_countries.html'
+
+    return render(request, template, context)
