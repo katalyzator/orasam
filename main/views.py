@@ -52,7 +52,9 @@ def contacts_view(request):
 
 
 def country_view(request):
-    context = {}
+    news = News.objects.all()
+
+    context = {"news": news}
     template = 'countries.html'
 
     return render(request, template, context)
@@ -110,7 +112,16 @@ def raporlar_view(request):
 
 
 def makale_country_view(request):
-    context = {}
+    news = News.objects.all()
+    context = {"news": news}
     template = 'm_countries.html'
+
+    return render(request, template, context)
+
+
+def makale_konu_view(request):
+    news = News.objects.all()
+    context = {"news": news}
+    template = 'm_news.html'
 
     return render(request, template, context)

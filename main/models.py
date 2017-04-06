@@ -8,12 +8,31 @@ from main.helper import transform
 
 pathNews = 'news/images'
 pathEvent = 'events/images'
-TYPE_NEWS = (('uluslar', 'Uluslar arasi iliskiler'),
-             ('ekonomi', 'ekonomi'),
-             ('enerji', 'enerji'),
-             ('siyaset', 'siyaset'),
-             ('toplum', 'toplum'),
-             )
+TYPE_NEWS = (
+    ('uluslar', 'Uluslar arasi iliskiler'),
+    ('ekonomi', 'ekonomi'),
+    ('enerji', 'enerji'),
+    ('siyaset', 'siyaset'),
+    ('toplum', 'toplum'),
+    ('tarim', 'TARIM'),
+    ('hukuk', 'hukuk'),
+    ('iletisim', 'Iletisim'),
+    ('Guvenlik', 'Guvenlik'),
+)
+
+COUNTRIES = (
+    ('Afganistan', 'Afganistan'),
+    ('Azerbaycan', 'Azerbaycan'),
+    ('China', 'China'),
+    ('Hindistan', 'Hindistan'),
+    ('Kazakistan', 'Kazakistan'),
+    ('Kyrgyzstan', 'Kyrgyzstan'),
+    ('Uzbekistan', 'Uzbekistan'),
+    ('Russia', 'Russia'),
+    ('Tajikistan', 'Tajikistan'),
+    ('Turkey', 'Turkey'),
+    ('Turkmenistan', 'Turkmenistan'),
+)
 
 
 class News(models.Model):
@@ -26,6 +45,7 @@ class News(models.Model):
     text = models.TextField(verbose_name='Текст поста')
     image = models.ImageField(upload_to=transform(pathNews), verbose_name='картинка')
     news_type = models.CharField(choices=TYPE_NEWS, verbose_name='Тип новости', max_length=100)
+    country = models.CharField(max_length=255, choices=COUNTRIES, verbose_name='Страна')
 
     timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
