@@ -134,7 +134,6 @@ def single_news(request, id):
 
         context = {"news": news}
         template = 'single_post.html'
-        print news.title
 
         return render(request, template, context)
 
