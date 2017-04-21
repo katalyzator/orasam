@@ -1,3 +1,4 @@
+from django.http import Http404
 from django.shortcuts import render
 from .models import *
 
@@ -125,3 +126,17 @@ def makale_konu_view(request):
     template = 'm_news.html'
 
     return render(request, template, context)
+
+
+def single_news(request, id):
+    try:
+        news = News.objects.get(id=id)
+
+        context = {"news": news}
+        template = 'single_post.html'
+        print news.title
+
+        return render(request, template, context)
+
+    except News.DoesNotExist:
+        raise Http404
