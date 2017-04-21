@@ -1,0 +1,36 @@
+{% extends 'main/base.html' %}
+
+{% load staticfiles %}
+
+
+{% block content %}
+
+    <div class="article">
+        <div class="article_container grid">
+            <div class="article_block">
+                <h4>{{ events.title }}</h4>
+                <span>{{ events.timestamp }}</span>
+
+
+                <div class="article_img">
+                    <img src="{{ events.image.url }}" alt="image">
+                </div>
+
+                <p>
+                    {{ events.text }}
+                </p>
+
+                <ul class="post_share">
+                    <li>Поделиться статьей:</li>
+                    <li><img src="{% static 'images/social1.png' %}" alt="image"></li>
+                    <li><img src="{% static 'images/social2.png' %}" alt="image"></li>
+                    <li><img src="{% static 'images/social3.png' %}" alt="image"></li>
+                    <li><img src="{% static 'images/social4.png' %}" alt="image"></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

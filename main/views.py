@@ -140,3 +140,29 @@ def single_news(request, id):
 
     except News.DoesNotExist:
         raise Http404
+
+
+def single_publication(request, id):
+    try:
+        publications = Publications.objects.get(id=id)
+
+        context = {"publications": publications}
+        template = 'single_publication.html'
+
+        return render(request, template, context)
+
+    except Publications.DoesNotExist:
+        raise Http404
+
+
+def single_event(request, id):
+    try:
+        events = Event.objects.get(id=id)
+
+        context = {"events": events}
+        template = 'single_event.html'
+
+        return render(request, template, context)
+
+    except Event.DoesNotExist:
+        raise Http404
