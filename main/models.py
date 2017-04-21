@@ -51,7 +51,7 @@ class News(models.Model):
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
     def __unicode__(self):
-        return smart_unicode(self.title)
+        return smart_unicode(self.id)
 
 
 class Event(models.Model):
@@ -68,7 +68,7 @@ class Event(models.Model):
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
     def __unicode__(self):
-        return smart_unicode(self.title)
+        return smart_unicode(self.id)
 
 
 class NewsImage(models.Model):
@@ -113,7 +113,7 @@ class Publications(models.Model):
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
     def __unicode__(self):
-        return smart_unicode(self.title)
+        return smart_unicode(self.id)
 
 
 class PublicationImage(models.Model):
@@ -177,7 +177,7 @@ class Partner(models.Model):
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
     def __unicode__(self):
-        return smart_unicode(self.title)
+        return smart_unicode(self.id)
 
 
 class Employee(models.Model):
@@ -193,3 +193,6 @@ class Employee(models.Model):
 
     timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
+
+    def __unicode__(self):
+        return smart_unicode(self.id)
