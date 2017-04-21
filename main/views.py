@@ -145,7 +145,7 @@ def single_publication(request, id):
     try:
         publications = Publications.objects.get(id=id)
 
-        context = {"publications": publications}
+        context = {"publication": publications}
         template = 'single_publication.html'
 
         return render(request, template, context)
